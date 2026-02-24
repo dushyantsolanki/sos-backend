@@ -20,7 +20,7 @@ const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
     // origin: process.env.CLIENT_URL || 'http://localhost:5173',
-    origin: "https://sos-backend-lwmk.onrender.com",
+    origin: "https://sos-frontend-delta.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
@@ -32,7 +32,7 @@ initSocket(io);
 app.use(
   cors({
     // origin: process.env.CLIENT_URL || "http://localhost:5173",
-    origin: "https://sos-backend-lwmk.onrender.com",
+    origin: "https://sos-frontend-delta.vercel.app",
     credentials: true,
   }),
 );
